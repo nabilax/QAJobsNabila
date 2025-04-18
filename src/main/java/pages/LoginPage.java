@@ -23,17 +23,18 @@ public class LoginPage {
 
     public void setEmailField(String email) throws InterruptedException {
         driver.findElement(emailField).sendKeys(email);
-        Thread.sleep(1000);
+        Thread.sleep(5000);
     }
 
     public void setPasswordField(String password) throws InterruptedException {
         driver.findElement(passwordField).sendKeys(password);
-        Thread.sleep(1000);
+        Thread.sleep(5000);
 
     }
 
-    public void clickSigninBttn(){
+    public void clickSigninBttn() throws InterruptedException {
         driver.findElement(signinBttn).click();
+        Thread.sleep(5000);
     }
 
     public void login(String email, String password) throws InterruptedException {

@@ -12,7 +12,7 @@ public class RegistrationPage {
     By emailField = By.id("email");
     By passwordField = By.id("password");
     By conpassField = By.id("conf-pass");
-    By regisBttn = By.xpath("//button[normalize-space()='REGISTER NOW']");
+    By regisBttn = By.linkText("REGISTER NOW");
 
     public RegistrationPage(WebDriver driver){
         this.driver = driver;
@@ -50,8 +50,9 @@ public class RegistrationPage {
         Thread.sleep(2000);
     }
 
-    public void clickRegistrationBttn()  {
+    public void clickRegistrationBttn() throws InterruptedException {
        driver.findElement(regisBttn).click();
+        Thread.sleep(2000);
 
     }
 
